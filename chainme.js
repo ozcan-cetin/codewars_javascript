@@ -15,19 +15,15 @@
 // returns 90;
 
 //! çözüm
+
 let fs=[]
 function chain(input, fs){
-    function add(num){
-        return num+1
+    let output = input;
+    for(let i = 0; i < fs.length; i++ ){
+        output = fs[i](output);
     }
-    
-    function mult(num) {
-        return num * 30;
-    }
-
-    fs = [add, mult]
-   
-    return fs[1](fs[0](input))
+    return output
 }
 
-console.log(chain(2, fs));
+
+
