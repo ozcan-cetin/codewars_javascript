@@ -20,9 +20,60 @@
 
 // More about roman numerals - http://en.wikipedia.org/wiki/Roman_numerals
 
-let romen={1:"I",5:"V",10:"X",50:"L",100:"C",500:"D",1000:"M"}
-let num = 55
-let kıyas = 0
-let liste = 0
-let result = String(num).length
+function solution(number){
+    let result="";
+    while(number>=1000){
+        result+="M"
+        number=number-1000;
+    }
+    while(number>=900){
+        result+="CM"
+        number=number-900;
+    }
+    while(number>=500){
+        result+="D"
+        number=number-500;
+    }
+    while(number>=400){
+        result+="CD"
+        number=number-400;
+    }
+    while(number>=100){
+        result+="C"
+        number=number-100;
+    }
+    while(number>=90){
+        result+="XC"
+        number=number-90;
+    }
+    while(number>=50){
+        result+="L"
+        number=number-50;
+    }
+    while(number>=40){
+        result+="XL"
+        number=number-40;
+    }
+    while(number>=10){
+        result+="X"
+        number=number-10;
+    }
+    while(number==9){
+        result+="IX"
+        number=number-9;
+    }
+    while(number>=5){
+        result+="V"
+        number=number-5;
+    }
+    while(number==4){
+        result+="IV"
+        number=number-4;
+    }
+    while(number>=1){
+        result+="I"
+        number=number-1;
+    }
+    return result
+}
 
