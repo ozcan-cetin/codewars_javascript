@@ -1,3 +1,3 @@
 # codewars_javascript
 
-buraya çözdüğüm soruları atacağım.
+**buraya çözdüğüm soruları atacağım.
