@@ -7,9 +7,15 @@
 // 999 --> 4 (because 9*9*9 = 729, 7*2*9 = 126, 1*2*6 = 12, and finally 1*2 = 2)
 // 4 --> 0 (because 4 is already a one-digit number)
 
-let num = 14
-let counter = 0
-let new_num = num.toString().split("").map((a,b)=>Number(a)*Number(b); counter += 1)
+function persistence(num){
+    let result = String(num);
+    let counter = 0;
+    while(result.length != 1){
+        result = String(result).split("").map((a)=>Number(a)).reduce((a,b)=>a*b).toString()
+        counter += 1
+}
+    return counter
+}
+console.log(persistence(999));
 
-console.log(typeof(new_num));
-console.log(new_num);
+
